@@ -1,26 +1,40 @@
 package com.brigdelab.daygenerics;
 
+import java.util.*;
+
 public class MaximumNumber {
-	public int findMax(int x, int y, int z) {
-		if(x > y && x > z) {
-			return x;
-		}
-		if(y > x && y > z) {
-			return y;
-		}
-		if(z > x && z > y) {
-			return z;
-		}
+	static Integer x, y, z;
+	public void getInput() {
 
-		return 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Value of x: ");
+		x = sc.nextInt();
+
+		System.out.print("Enter Value of y: ");
+		y = sc.nextInt();
+
+		System.out.print("Enter Value of z: ");
+		z = sc.nextInt();
+		sc.close();
 	}
+	public Integer testMaximum(Integer a, Integer b, Integer c) {
+		Integer max = a;
+		if(b.compareTo(max)>0) {
+			max = b;
+		}
+		if(c.compareTo(max)>0)
+		{
+			max = c;
+		}
+		return max;
+	}
+
 	public static void main(String[] args) {
-		int x = 66;
-		int y = 45;
-		int z = 89;
-		MaximumNumber max = new MaximumNumber();
-		System.out.println(max.findMax(x, y, z));
+		MaximumNumber maxi = new MaximumNumber();
+		Integer max ;
+		maxi.getInput();
+		max = maxi.testMaximum(x, y, z);
+		System.out.println("Maxmum value is : " + max);
 
 	}
-
 }
