@@ -3,9 +3,8 @@ package com.brigdelab.daygenerics;
 import java.util.Scanner;
 
 public class MaximumNumberUC4 <T extends Comparable<T>>  {
-	T first;
-	T second;
-	T third;
+	T first, second, third;
+	
 	public MaximumNumberUC4(T x, T y, T z) {
 		this.first = x;
 		this.second = y;
